@@ -2,6 +2,8 @@
 
 ### DECIDE whether to launch an anti-ballistic missile system based on radar data
 
+### Compiling and running
+
 ### Statement of contributions
 
 #### Daniel Williams
