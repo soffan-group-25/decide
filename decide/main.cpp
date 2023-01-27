@@ -1,7 +1,7 @@
 // Use forward declaration rather than #include since we only need one function
-void DECIDE();
+void decide();
 
 int main(){
-    DECIDE();
+    decide();
     return 0;
 }

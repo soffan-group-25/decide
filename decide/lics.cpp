@@ -2,48 +2,47 @@
 #include <iostream>
 
 bool lic0(){
-    std::cout << "lic0" << std::endl;
-    return true;
+    return false;
 }
 bool lic1(){
-    return true;
+    return false;
 }
 bool lic2(){
-    return true;
+    return false;
 }
 bool lic3(){
-    return true;
+    return false;
 }
 bool lic4(){
-    return true;
+    return false;
 }
 bool lic5(){
-    return true;
+    return false;
 }
 bool lic6(){
-    return true;
+    return false;
 }
 bool lic7(){
-    return true;
+    return false;
 }
 bool lic8(){
-    return true;
+    return false;
 }
 bool lic9(){
-    return true;
+    return false;
 }
 bool lic10(){
-    return true;
+    return false;
 }
 bool lic11(){
-    return true;
+    return false;
 }
 bool lic12(){
-    return true;
+    return false;
 }
 bool lic13(){
-    return true;
+    return false;
 }
 bool lic14(){
-    return true;
+    return false;
 }

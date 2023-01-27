@@ -48,7 +48,7 @@ static const double pi = 3.1415926535;
 
 
 // Functions
-void DECIDE();
+void decide();
 // inlined comparison function as seen in example header
 
 #endif
