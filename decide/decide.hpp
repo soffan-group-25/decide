@@ -46,7 +46,7 @@ extern int numpoints;
 extern std::vector<Coordinate> points;
 extern Parameters parameters;
 extern std::vector<std::vector<Connector> > lcm;
-extern std::vector<int> puv;
+extern std::vector<bool> puv;
 
 // Functions
 void decide(void);
