@@ -2,16 +2,16 @@
 
 DECIDE whether to launch an anti-ballistic missile system based on radar data
 
-### Compiling and running
+## Compiling and running
 
-### Statement of contributions
+## Statement of contributions
 
-#### Daniel Williams
+### Daniel Williams
 
-#### Didrik Munther
+### Didrik Munther
 
-#### Hannah Burak
+### Hannah Burak
 
-#### Håvard Alstadheim
+### Håvard Alstadheim
 
-#### Pontus Söderlund
+### Pontus Söderlund
