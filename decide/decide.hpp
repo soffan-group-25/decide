@@ -9,10 +9,15 @@ typedef enum { ANDD,
                ORR,
                NOTUSED } Connector;
 
-typedef struct {
+struct Coordinate {
     double x;
     double y;
-} Coordinate;
+
+    // Get distance from this coordinate to `other` coordinate.
+    double distance(const Coordinate* other) const {
+        return sqrt(pow(this->x - other->x, 2) + pow(this->y - other->y, 2));
+    }
+};
 
 /* Taken from the header file provided. Redesign as necessary.
  * The specification calls this "inputs to the DECIDE function" but they also
