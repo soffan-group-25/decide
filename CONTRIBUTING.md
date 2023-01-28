@@ -31,7 +31,8 @@
 - [ ] All code in your PR needs to have been formatted by `clang-format`
 - [ ] The merge commit title should follow our commit prefix convention of
   either "feat", "fix", "doc", or "refactor"
-- [ ] The merge commit body should reference at least one issue
+- [ ] The merge commit body should reference at least one issue (e.g. "resolves
+  #29")
 
 
 ## GitHub Setup
