@@ -26,6 +26,7 @@
 
 ## Pull Request Merge Checklist
 
+```
 - [ ] Feature/fix PRs should add one atomic (as small as possible) feature or
   fix
 - [ ] If your PR adds a feature or fix it also needs to add or modify at least
@@ -34,6 +35,7 @@
 - [ ] The merge commit title should follow our commit prefix convention of
   either "feat", "fix", "doc", or "refactor"
 - [ ] The merge commit body should reference at least one issue
+```
 
 
 ## GitHub Setup
