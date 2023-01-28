@@ -14,14 +14,13 @@
    PR, and add a "draft" label to the PR if you don't think it's ready to be
    merged. Insert [the below checklist](#pull-request-merge-checklist) as the
    first comment on your PR. The title and description of the PR will be used
-   for the default commit title and body, respectively. You can continually
-   draft your squash merge commit message by editing the PR title and
-   description.
-4. If you think the PR is ready to be merged, remove the "draft" label (if
-   present) and ask for a review from at least one person. The PR author and
-   reviewer(s) should check that all checklist items are taken care of before
-   merging the PR. Failing to follow the checklist could lead to not meeting
-   our project requirements.
+   for the final merge commit title and body, respectively. These can edited
+   while developing your PR.
+4. If you think the PR is ready to be merged and have handled all checklist
+   items, remove the "draft" label (if present) and ask for a review. The PR
+   reviewer(s) should double check that all checklist items are taken care of
+   before merging the PR. Failing to follow the checklist could lead to not
+   meeting our project requirements.
 
 ## Pull Request Merge Checklist
 
