@@ -14,8 +14,8 @@ struct Coordinate {
     double y;
 
     // Get distance from this coordinate to `other` coordinate.
-    double distance(const Coordinate* other) const {
-        return sqrt(pow(this->x - other->x, 2) + pow(this->y - other->y, 2));
+    double distance(const Coordinate& other) const {
+        return sqrt(pow(this->x - other.x, 2) + pow(this->y - other.y, 2));
     }
 };
 
