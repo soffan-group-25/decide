@@ -15,7 +15,9 @@
    merged. Insert [the below checklist](#pull-request-merge-checklist) as the
    first comment on your PR. The title and description of the PR will be used
    for the final merge commit title and body, respectively. These can edited
-   while developing your PR.
+   while developing your PR. [Link your pull request to the
+   issue(s)](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+   that it will solve.
 4. If you think the PR is ready to be merged and have handled all checklist
    items, remove the "draft" label (if present) and ask for a review. The PR
    reviewer(s) should double check that all checklist items are taken care of
@@ -31,8 +33,7 @@
 - [ ] All code in your PR needs to have been formatted by `clang-format`
 - [ ] The merge commit title should follow our commit prefix convention of
   either "feat", "fix", "doc", or "refactor"
-- [ ] The merge commit body should reference at least one issue (e.g. "resolves
-  #29")
+- [ ] The merge commit body should reference at least one issue
 
 
 ## GitHub Setup
