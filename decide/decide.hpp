@@ -9,7 +9,10 @@ typedef enum { ANDD,
                ORR,
                NOTUSED } Connector;
 
-typedef std::pair<double, double> Coordinate;
+typedef struct {
+    double x;
+    double y;
+} Coordinate;
 
 /* Taken from the header file provided. Redesign as necessary.
  * The specification calls this "inputs to the DECIDE function" but they also
