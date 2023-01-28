@@ -1,16 +1,41 @@
 # Contributing
 
-Open a Pull Request (PR) in GitHub for your contribution. Insert the below
-checklist as the first comment on your PR. After creating the PR you are free
-to continue adding commits before requesting a review or merge. The PR author
-and reviewer(s) should check that all checklist items are taken care of before
-merging the PR. Failing to follow this checklist could lead to not meeting our
-project requirements.
+## Pull Request (PR) Workflow
 
-- [ ] Each PR should add an atomic (as small as possible) bug fix or feature
-- [ ] If your PR adds a feature or fix it also needs to add or modify at least one test
-- [ ] Someone needs to review your PR before it is merged
-- [ ] The merge method should be a squash merge
-- [ ] You can continually draft your squash merge commit message by editing the PR title and description
-- [ ] The squash merge commit title should follow our commit prefix convention of either "feat", "fix", "doc", "refactor"
-- [ ] The squash merge commit should reference at least one issue
+0. Read the [pull request merge checklist](#pull-request-merge-checklist) and
+   plan your work around it.
+1. Find an issue to work on and assign yourself to it. If an issue does not
+   exist for what you want to work on, create the issue first.
+2. Push your (unfinished) work early so others can see it. You need to create a
+   branch with the prefix `f/` for feature, `h/` for (hot)fix, `d/` for
+   documentation, or `r/` for refactor. E.g. `f/add-lic-5` for a PR that adds
+   the 5th LIC function to the program.
+3. Right away, open a PR on GitHub based on that branch. Assign yourself to the
+   PR, and add a "draft" label to the PR if you don't think it's ready to be
+   merged. Insert [the below checklist](#pull-request-merge-checklist) as the
+   first comment on your PR. The title and description of the PR will be used
+   for the default commit title and body, respectively. You can continually
+   draft your squash merge commit message by editing the PR title and
+   description.
+4. If you think the PR is ready to be merged, remove the "draft" label (if
+   present) and ask for a review from at least one person. The PR author and
+   reviewer(s) should check that all checklist items are taken care of before
+   merging the PR. Failing to follow the checklist could lead to not meeting
+   our project requirements.
+
+## Pull Request Merge Checklist
+
+- [ ] Feature/fix PRs should add one atomic (as small as possible) feature or
+  fix
+- [ ] If your PR adds a feature or fix it also needs to add or modify at least
+  one test
+- [ ] All code in your PR needs to have been formatted by `clang-format`
+- [ ] The merge commit title should follow our commit prefix convention of
+  either "feat", "fix", "doc", or "refactor"
+- [ ] The merge commit should reference at least one issue in its commit body
+
+
+## GitHub Setup
+
+All PRs use squash merges. There is no automatic block against merging PRs that
+haven't been reviewed. This needs to be handled manually.
