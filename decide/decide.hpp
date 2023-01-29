@@ -2,6 +2,7 @@
 #define DECIDE_H
 
 #include <vector>
+#include <cmath>
 
 // Type declarations
 //
