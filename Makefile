@@ -1,7 +1,8 @@
 CXX := g++
 CXXFLAGS := -I.
 objects := decide/lics.o decide/decide.o
-testfiles := $(basename $(wildcard decide/*.test.cpp))
+# Testfiles to make/compile (e.g. decide.test). Ignore example.test.cpp.
+testfiles = $(filter-out decide/example.test, $(basename $(wildcard decide/*.test.cpp)))
 
 ### Main program
 decide: DECIDE
