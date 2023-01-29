@@ -39,4 +39,4 @@ test: test_runner
 # Declare as phony to assure target is run even if there's a "clean" file
 .PHONY: clean
 clean:
-	rm decide/*.o DECIDE decide/*.test
+	rm -f decide/*.o DECIDE decide/*.test
