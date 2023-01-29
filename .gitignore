@@ -3,6 +3,9 @@
 
 # Compiled files
 /a.out
+*.o
+DECIDE
+*.test
 
 # vscode workspace folder
 /.vscode
