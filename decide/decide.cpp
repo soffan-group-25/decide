@@ -65,4 +65,21 @@ FUV calculateFUV(PUM &pum, PUV &puv) {
 
 /// This is the main function used to decide whether to launch an interceptor
 /// or not. Prints YES or NO to stdout, according to the specification.
-void decide() {}
+void decide(FUV &fuv) {
+  int n = fuv.size();
+  bool launch = true;
+
+  // All elements in FUV must be true for launch.
+  for (int i = 0; i < n; i++) {
+    if (!fuv[i]) {
+      launch = false;
+      break;
+    }
+  }
+
+  if (launch) {
+    printf("YES\n");
+  } else {
+    printf("NO\n");
+  }
+}
