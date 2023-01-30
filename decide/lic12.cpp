@@ -14,14 +14,33 @@ bool criteria1(Points &points, int kpts, int length) {
 
     if (distance > length)
       // There exists a set of two data points separated
-      // by kpts points with length1 distance apart.
+      // by kpts points with at least length1 distance apart.
       return true;
   }
 
   return false;
 }
 
-bool criteria2() { return false; } //todo: complete
+// There exists at least one set of two data point separated by exactly K_PTS
+// consecutive intervening points, that are a distance less than the length,
+// LENGTH2, apart.
+bool criteria2(Points &points, int kpts, int length) {
+  int npts = points.size();
+  Coordinate *last = &points[0];
+
+  // Next point separated by kpts points.
+  for (int i = 2 + kpts; i < npts; i++) {
+    Coordinate *current = &points[i];
+    double distance = current->distance(*last);
+
+    if (distance < length)
+      // There exists a set of two data points separated
+      // by kpts points with less than length2 distance apart.
+      return true;
+  }
+
+  return false;
+}
 
 bool lic12(Points points, Parameters parameters) {
   int npts = points.size();
@@ -41,7 +60,7 @@ bool lic12(Points points, Parameters parameters) {
     return false;
 
   // Criteria 2 must be fulfilled.
-  if (!criteria2())
+  if (!criteria2(points, kpts, length2))
     return false;
 
   return true;
