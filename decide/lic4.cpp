@@ -21,7 +21,7 @@ bool lic4(Points points, Parameters param){
         for (int i=0; i<npts;i++){
             int position[qpts];
             for (int a=0; a<qpts; a++){
-                position[a]=quad(points[i]);
+                position[a]=quad(points[i+a]);
             }
             if (unique(position, 3)){
                 return true;
