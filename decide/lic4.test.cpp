@@ -19,7 +19,15 @@ Parameters param{.QPTS=6, .QUADS=3};
 assert(lic4(points,param));
 }
 
-void test3_false(){
+void test3_true(){
+Points points{Coordinate(1, 1), Coordinate(0, -1), Coordinate(0, 2),Coordinate(-5, -4), Coordinate(1, -9), Coordinate(0, 0)};
+Parameters param{.QPTS=6, .QUADS=2};
+assert(lic4(points,param));
+}
+
+//should be false
+//all points are the same so they can't be in different quads
+void test4_false(){
 Points points{Coordinate(1, 1), Coordinate(1, 1), Coordinate(1, 1),Coordinate(1, 1), Coordinate(1, 1), Coordinate(1, 1)};
 Parameters param{.QPTS=3, .QUADS=2};
 assert(lic4(points,param));
