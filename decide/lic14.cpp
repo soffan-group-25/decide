@@ -1,4 +1,4 @@
-#include <C:\Users\Hannah Burak\Documents\grunder\14\decide\decide\decide.hpp>
+#include <decide/decide.hpp>
 
 /*There exists at least one set of three data points, separated by exactly E PTS and F PTS consecutive intervening points, respectively, that are the vertices of a triangle with area greater
 than AREA1. In addition, there exist three data points (which can be the same or different
@@ -8,11 +8,11 @@ NUMPOINTS < 5.
 0 ≤ AREA2*/
 
 bool lic14(Points points, Parameters param){
-    int npts=sizeof(points);
+    int npts=points.size();
     int area1= param.AREA1;
     int area2=param.AREA2;
-    int e=param.EPTS;
-    int f=param.FPTS;
+    int e=param.EPTS+1;
+    int f=param.FPTS+1;
     
     if (npts<5 || area2<= 0){
         return false;
@@ -23,13 +23,13 @@ bool lic14(Points points, Parameters param){
     int area;
 
     for (int i=0; i<npts; i++){
-        if (i+e+f>sizeof(points)){
+        if (i+e+f>npts){
             return false;
         }
         Coordinate p1=points[i];
         Coordinate p2=points[i+e];
         Coordinate p3=points[i+e+f];
-        area=1/2*(p1.x*(p2.y-p3.y)+p2.x*(p3.y-p1.y)+p3.x*(p1.y-p2.y));
+        area=(p1.x*(p2.y-p3.y)+p2.x*(p3.y-p1.y)+p3.x*(p1.y-p2.y))/2;
         if (area<0){
             area=area*-1;
         }
