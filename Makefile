@@ -21,7 +21,7 @@ DECIDE: $(objects) decide/main.o
 
 
 ### Formatting
-format: $(wildcard decide/*.cpp)
+format: $(wildcard decide/*.?pp)
 	clang-format -i $< --style=file
 
 
