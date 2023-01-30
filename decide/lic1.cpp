@@ -4,11 +4,6 @@
 /// LIC1 is true if there exists "at least one set of three consecutive
 /// data points that cannot all be contained within or on a circle of
 /// radius RADIUS1".
-///
-/// We first check whether the points are colinear or if two points are
-/// the same; if so, we just measure the maximum length between them.
-/// If they are not all on the same line, we construct a circle out of
-/// the three points and check whether its radius is smaller than RADIUS1.
 bool lic1(Points points, Parameters params) {
   if (points.size() < 3) {
     return false;
