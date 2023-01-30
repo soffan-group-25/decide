@@ -5,6 +5,7 @@
 
 // Functions
 bool lic0(Points points, Parameters parameters);
+bool lic6(Points points, Parameters parameters);
 bool lic12(Points points, Parameters parameters);
 
 #endif
