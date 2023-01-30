@@ -16,17 +16,14 @@ bool lic7(Points points, Parameters parameters) {
   if (npts < 3)
     return false;
 
-  Coordinate *last = &points[0];
-
   // Next point separated by kpts points.
-  for (int i = 1 + kpts; i < npts; i++) {
-    Coordinate *current = &points[i];
-    double distance = current->distance(*last);
+  for (int i = 0; i < npts - kpts; i++) {
+    Coordinate &first = points[i];
+    Coordinate &second = points[i + kpts];
+    double distance = first.distance(second);
 
     if (distance > length)
       return true;
-
-    last = current;
   }
 
   return false;
