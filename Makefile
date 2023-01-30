@@ -32,7 +32,7 @@ format: $(wildcard decide/*.?pp)
 # Compile all test files together w/ normal file and run them
 # use @ for silent running
 test_runner: $(testfiles)
-	@for f in $^; do eval $${f} || (echo "Test failed for $<" && exit 1); done
+	@for f in $^; do eval $${f} || (echo "Test failed for $${f}" && exit 1); done
 
 test: test_runner
 	@echo "Ran tests for:"
