@@ -15,9 +15,9 @@ bool lic11(Points points, Parameters parameters) {
     return false;
 
   // Next point separated by kpts points.
-  for (int i = 0; i < npts - gpts; i++) {
+  for (int i = 0; i < npts - gpts - 1; i++) {
     Coordinate &first = points[i];
-    Coordinate &second = points[i + gpts];
+    Coordinate &second = points[i + gpts + 1];
     double value = second.x - first.x; // X[j] - X[i] from specification.
 
     // There exists a set of two data points j, i separated
