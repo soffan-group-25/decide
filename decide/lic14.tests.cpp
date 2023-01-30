@@ -15,6 +15,7 @@ void test_false_instance1() {
     assert(lic14(points, parameters));
 }
 
+
 //first area is wrong
 void test_false_instance2() {
     Points points{Coordinate(1, -2), Coordinate(0, 0),
