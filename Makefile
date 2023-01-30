@@ -20,6 +20,10 @@ DECIDE: $(objects) decide/main.o
 	$(CXX) -o $@ -c $< $(CXXFLAGS)
 
 
+### Formatting
+format: $(wildcard decide/*.?pp)
+	clang-format -i $< --style=file
+
 
 ### Testing
 %.test: %.test.cpp %.cpp
