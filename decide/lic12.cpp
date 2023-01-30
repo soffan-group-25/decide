@@ -5,12 +5,12 @@
 // LENGTH1, apart.
 bool criteria1(Points &points, int kpts, int length) {
   int npts = points.size();
-  Coordinate *last = &points[0];
 
   // Next point separated by kpts points.
-  for (int i = 1 + kpts; i < npts; i++) {
-    Coordinate *current = &points[i];
-    double distance = current->distance(*last);
+  for (int i = 1; i < npts - kpts; i++) {
+    Coordinate &first = points[i];
+    Coordinate &second = points[i + kpts];
+    double distance = first.distance(second);
 
     // There exists a set of two data points separated
     // by kpts points with at least length1 distance apart.
@@ -26,12 +26,12 @@ bool criteria1(Points &points, int kpts, int length) {
 // LENGTH2, apart.
 bool criteria2(Points &points, int kpts, int length) {
   int npts = points.size();
-  Coordinate &last = points[0];
 
   // Next point separated by kpts points.
-  for (int i = 1 + kpts; i < npts; i++) {
-    Coordinate &current = points[i];
-    double distance = current.distance(last);
+  for (int i = 0; i < npts - kpts; i++) {
+    Coordinate &first = points[i];
+    Coordinate &second = points[i + kpts];
+    double distance = first.distance(second);
 
     // There exists a set of two data points separated
     // by kpts points with less than length2 distance apart.
