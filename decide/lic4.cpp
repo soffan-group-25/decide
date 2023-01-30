@@ -75,7 +75,7 @@ bool lic4(Points points, Parameters param){
     case 2:
         for (int i=0; i<npts;i++){
             int position[qpts];
-            if ((i+qpts)<sizeof(points)){
+            if ((i+qpts-1)<npts){
                 for (int a=0; a<qpts; a++){
                     position[a]=quad(points[i+a]);
                 }
@@ -88,7 +88,7 @@ bool lic4(Points points, Parameters param){
     case 3:
         for (int i=0; i<npts;i++){
             int position[qpts];
-            if ((i+qpts)<sizeof(points)){
+            if ((i+qpts-1)<npts){
                 for (int a=0; a<qpts; a++){
                     position[a]=quad(points[i+a]);
                 }
