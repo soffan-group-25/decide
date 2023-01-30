@@ -1,9 +1,36 @@
 #include <cmath>
 #include <decide/decide.hpp>
 
+// https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment
 double distanceFromLine(Coordinate &point, Coordinate &line_start,
                         Coordinate &line_end) {
-  return 0.0; // todo: implement
+  double A = point.x - line_start.x;
+  double B = point.y - line_start.y;
+  double C = line_end.x - line_start.x;
+  double D = line_end.y - line_start.y;
+
+  double dot = A * C + B * D;
+  double lenSquared = C * C + D * D;
+  double param = -1;
+  if (lenSquared != 0)
+    param = dot / lenSquared;
+
+  double xx, yy;
+  if (param < 0) {
+    xx = line_start.x;
+    yy = line_start.y;
+  } else if (param > 1) {
+    xx = line_end.x;
+    yy = line_end.y;
+  } else {
+    xx = line_start.x + param * C;
+    yy = line_start.y + param * D;
+  }
+
+  double dx = point.x - xx;
+  double dy = point.y - yy;
+
+  return sqrt(dx * dx + dy * dy);
 }
 
 bool lic6(Points points, Parameters parameters) {
@@ -21,7 +48,7 @@ bool lic6(Points points, Parameters parameters) {
 
     // Assuming line to compare against is a line segment,
     // therefore bound and not infinite.
-    // 
+    //
     // If first and second are equal, the calculated
     // distance to compare with DIST is the distance
     // from the coincident point to all other points

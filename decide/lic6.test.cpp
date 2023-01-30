@@ -1,6 +1,21 @@
 #include <cassert>
+#include <cmath>
 #include <cstdlib>
 #include <decide/decide.hpp>
 #include <decide/lics.hpp>
 
-int main() {}
+double distanceFromLine(Coordinate &point, Coordinate &line_start,
+                        Coordinate &line_end);
+
+// The point is closest to the line
+void test_distance_from_line() {
+  auto point = Coordinate(-2, 5);
+  auto start = Coordinate(100, -73.75);
+  auto end = Coordinate(-100, 76.25);
+  double result = distanceFromLine(point, start, end);
+  assert(abs(result - 9.0 / 5.0) < 0.0001);
+}
+
+int main() {
+  test_distance_from_line();
+}
