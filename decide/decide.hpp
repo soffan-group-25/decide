@@ -53,6 +53,7 @@ typedef struct {
 } Parameters;
 
 typedef std::vector<Coordinate> Points;
+typedef std::vector<bool> CVM;
 
 // Constants
 static const double pi = 3.1415926535;
