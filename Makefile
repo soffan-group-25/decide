@@ -22,10 +22,14 @@ DECIDE: $(objects) decide/main.o
 
 ### Formatting
 format: $(wildcard decide/*.?pp)
-	clang-format -i $< --style=file
+	clang-format -i $^ --style=file
 
 
 ### Testing
+# Special case for utils file as it is only a header
+decide/utils.test: decide/utils.test.cpp
+	$(CXX) -o $@ $^ $(CXXFLAGS)
+
 %.test: %.test.cpp %.cpp
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
