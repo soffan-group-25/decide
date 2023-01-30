@@ -23,6 +23,8 @@ bool lic7(Points points, Parameters parameters) {
 
     if (distance > length)
       return true;
+
+    last = current;
   }
 
   return false;
