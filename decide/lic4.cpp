@@ -41,14 +41,6 @@ bool lic4(Points points, int qpts, int quads){
         return false;
     }
 
-    for (int i=0; i < npts; i++){
-        for (int  )
-        int q= quad(points[i]);
-
-
-    }
-
-
 }
 
 int quad(Coordinate point){
