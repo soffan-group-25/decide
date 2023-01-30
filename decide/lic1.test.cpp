@@ -3,6 +3,13 @@
 #include <decide/decide.hpp>
 #include <decide/lics.hpp>
 
+// Three points that form an obtuse triangle (should evaluate to true)
+void test_obtuse_triangle() {
+  Points points{Coordinate{0, 0}, Coordinate{100, 100}, Coordinate{50, 1}};
+  Parameters parameters{.RADIUS1 = 100};
+  assert(lic1(points, parameters));
+}
+
 // Three points that fit inside the circle (two have the same y coord)
 void test_true_instance_same_y() {
   Points points{Coordinate{1, 3}, Coordinate{3, 3}, Coordinate{2, 1}};
@@ -49,6 +56,7 @@ void test_colinear_false() {
 }
 
 int main() {
+  test_obtuse_triangle();
   test_true_instance_same_x();
   test_true_instance_same_y();
   test_false_instance();
