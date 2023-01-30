@@ -68,12 +68,10 @@ bool lic4(Points points, Parameters param){
         return false;
     }
     if (1<=param.QUADS<=3){
-        for (int i=0; i<npts;i++){
+        for (int i=0; i+qpts-1<npts;i++){
             int position[qpts];
-            if ((i+qpts-1)<npts){
-                for (int a=0; a<qpts; a++){
-                    position[a]=quad(points[i+a]);
-                }
+            for (int a=0; a<qpts; a++){
+                position[a]=quad(points[i+a]);
             }
             if (unique(position, param.QUADS, qpts)){
                 return true;
