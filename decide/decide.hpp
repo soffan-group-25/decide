@@ -60,12 +60,6 @@ typedef struct {
   double AREA2;   // MaximumareainLIC14
 } Parameters;
 
-<<<<<<< HEAD
-=======
-typedef std::vector<Coordinate> Points;
-typedef std::vector<bool> CVM;
-
->>>>>>> Add CVM type
 // Constants
 static const double pi = 3.1415926535;
 
