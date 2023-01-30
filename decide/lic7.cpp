@@ -22,9 +22,9 @@ bool lic7(Points points, Parameters parameters) {
     return false;
 
   // Next point separated by kpts points.
-  for (int i = 0; i < npts - kpts; i++) {
+  for (int i = 0; i < npts - kpts - 1; i++) {
     Coordinate &first = points[i];
-    Coordinate &second = points[i + kpts];
+    Coordinate &second = points[i + kpts + 1];
     double distance = first.distance(second);
 
     if (distance > length)
