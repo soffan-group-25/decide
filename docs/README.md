@@ -10,6 +10,8 @@ The program specification can be found [here](./decide.pdf) and the the Canvas a
 
 ## Statement of Contributions
 
+See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to contribute.
+
 ### Daniel Williams
 
 ### Didrik Munther
