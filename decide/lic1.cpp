@@ -58,10 +58,10 @@ bool lic1(Points points, Parameters params) {
     // To avoid this, we choose points 2 and 3 instead (since we know that they
     // are not all colinear and so 2 and 3 have to have different y values).
     if (slope12 == 0) {
-        slope = slope23;
-        pointA = point2;
-        pointB = point3;
-        pointC = point1;
+      slope = slope23;
+      pointA = point2;
+      pointB = point3;
+      pointC = point1;
     }
     double midpoint_x = (pointA.x + pointB.x) / 2;
     double midpoint_y = (pointA.y + pointB.y) / 2;
