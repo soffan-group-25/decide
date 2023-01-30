@@ -1,7 +1,7 @@
 #ifndef LICS_H
 #define LICS_H
 
-#include <decide/decide.hpp>
+#include <C:\Users\Hannah Burak\Documents\grunder\decide\decide\decide.hpp>
 
 // Functions
 bool lic0(Points points, Parameters parameters);

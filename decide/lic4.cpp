@@ -26,20 +26,37 @@ int quad(Coordinate point){
 }
 
 bool unique(int arr[], int goal){
-    int uni=1;
-    
-    for (int i=1; i<sizeof(arr); i++){
-        int a = 0;
-        for (a=0; a < i;a++) 
-            if (arr[i]==arr[a]){
-                break;
+    int first=0;
+    int second=0;
+    int third=0;
+    int forth=0;
+    for (int i=0; i < sizeof(arr);i++){
+        switch (arr[i])
+        {
+        case 1:
+            if (first==0){
+                 first++;
             }
-        if (i==a){
-            uni++;
+            break;
+        case 2:
+            if (second==0){
+                 second++;
+            }
+            break;
+        case 3:
+            if (third==0){
+                 third++;
+            }
+            break;
+        case 4:
+            if (forth==0){
+                 forth++;
+            }
+            break;
         }
-        if (uni == goal){
-            return true;
-        }
+    }
+    if ((first+second+third+forth)>=goal){
+        return true;
     }
     return false;
 }
@@ -63,7 +80,7 @@ bool lic4(Points points, Parameters param){
                     position[a]=quad(points[i+a]);
                 }
             }
-            if (unique(position, 3)){
+            if (unique(position, 2)){
                 return true;
             }
         }
