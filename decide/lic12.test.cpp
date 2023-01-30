@@ -9,7 +9,7 @@
 void test_true_instance() {
   Points points{Coordinate(1, 1), Coordinate(2, 2), Coordinate(3, 3),
                 Coordinate(4, 4), Coordinate(5, 5), Coordinate(100, 100)};
-  Parameters parameters{.LENGTH1 = 50, .LENGTH2 = 6, .KPTS = 2};
+  Parameters parameters{.LENGTH1 = 50, .KPTS = 2, .LENGTH2 = 6};
   assert(lic12(points, parameters));
 }
 
@@ -19,7 +19,7 @@ void test_true_instance() {
 void test_false_instance1() {
   Points points{Coordinate(1, 1), Coordinate(2, 2), Coordinate(3, 3),
                 Coordinate(4, 4), Coordinate(5, 5), Coordinate(100, 100)};
-  Parameters parameters{.LENGTH1 = 500, .LENGTH2 = 6, .KPTS = 2};
+  Parameters parameters{.LENGTH1 = 500, .KPTS = 2, .LENGTH2 = 6};
   assert(!lic12(points, parameters));
 }
 
@@ -29,7 +29,7 @@ void test_false_instance1() {
 void test_false_instance2() {
   Points points{Coordinate(1, 1), Coordinate(2, 2), Coordinate(3, 3),
                 Coordinate(4, 4), Coordinate(5, 5), Coordinate(100, 100)};
-  Parameters parameters{.LENGTH1 = 50, .LENGTH2 = 1, .KPTS = 2};
+  Parameters parameters{.LENGTH1 = 50, .KPTS = 2, .LENGTH2 = 1};
   assert(!lic12(points, parameters));
 }
 
