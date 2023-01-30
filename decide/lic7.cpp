@@ -1,7 +1,12 @@
 #include <cassert>
 #include <decide/decide.hpp>
 
-// 1 <= K_PTS <= (NUMPOINTS - 2). According to specification.
+// There exists at least one set of two data points separated by exactly K_PTS
+// consecutive intervening points that are a distance greater than the length,
+// LENGTH1, apart. The condition is not met when NUMPOINTS <3.
+//
+// 1<=K_PTS<=(NUMPOINTS−2) 1 <= K_PTS <= (NUMPOINTS - 2). According to
+// specification.
 bool lic7(Points points, Parameters parameters) {
   int npts = points.size();
   int kpts = parameters.KPTS;
