@@ -1,3 +1,4 @@
+#include <cassert>
 #include <decide/decide.hpp>
 
 // There exists at least one set of two data points, separated by exactly K_PTS
