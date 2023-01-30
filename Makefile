@@ -27,7 +27,7 @@ format: $(wildcard decide/*.?pp)
 
 ### Testing
 # Special case for utils file as it is only a header
-utils.test: utils.test.cpp
+decide/utils.test: decide/utils.test.cpp
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
 %.test: %.test.cpp %.cpp
