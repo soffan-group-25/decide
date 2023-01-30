@@ -12,7 +12,7 @@ void test_true_instance() {
 void test_false_instance() {
   Points points{Coordinate(0, 0), Coordinate(0, 0)};
   Parameters parameters{};
-  assert(lic5(points, parameters));
+  assert(!lic5(points, parameters));
 }
 
 int main() {
