@@ -11,9 +11,10 @@ bool lic1(Points points, Parameters params) {
   }
 
   for (int i = 1; i < points.size() - 1; i++) {
-      if (contained_in_circle(points[i-1], points[i], points[i+1], params.RADIUS1)) {
-          return true;
-      }
+    if (contained_in_circle(points[i - 1], points[i], points[i + 1],
+                            params.RADIUS1)) {
+      return true;
+    }
   }
 
   return false;
