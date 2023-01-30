@@ -5,6 +5,45 @@
 of decision will be by quadrant number, i.e., I, II, III, IV. For example, the data point (0,0)
 is in quadrant I, the point (-l,0) is in quadrant II, the point (0,-l) is in quadrant III, the point
 (0,1) is in quadrant I and the point (1,0) is in quadrant I.*/
+
+int quad(Coordinate point){
+    if (point.x>=0){
+        if (point.y>=0){
+            return 1;
+        }
+        else{
+            return 4;
+        }
+    }
+    else{
+        if (point.y>=0){
+            return 2;
+        }
+        else{
+            return 3;
+        }
+    }
+}
+
+bool unique(int arr[], int goal){
+    int uni=1;
+    
+    for (int i=1; i<sizeof(arr); i++){
+        int a = 0;
+        for (a=0; a < i;a++) 
+            if (arr[i]==arr[a]){
+                break;
+            }
+        if (i==a){
+            uni++;
+        }
+        if (uni == goal){
+            return true;
+        }
+    }
+    return false;
+}
+
 bool lic4(Points points, Parameters param){ 
     int qpts=param.QPTS;
     int npts=points.size();
@@ -46,42 +85,4 @@ bool lic4(Points points, Parameters param){
         return false;
     }
 
-}
-
-int quad(Coordinate point){
-    if (point.x>=0){
-        if (point.y>=0){
-            return 1;
-        }
-        else{
-            return 4;
-        }
-    }
-    else{
-        if (point.y>=0){
-            return 2;
-        }
-        else{
-            return 3;
-        }
-    }
-}
-
-bool unique(int arr[], int goal){
-    int uni=1;
-    
-    for (int i=1; i<sizeof(arr); i++){
-        int a = 0;
-        for (a=0; a < i;a++) 
-            if (arr[i]==arr[a]){
-                break;
-            }
-        if (i==a){
-            uni++;
-        }
-        if (uni == goal){
-            return true;
-        }
-    }
-    return false;
 }
