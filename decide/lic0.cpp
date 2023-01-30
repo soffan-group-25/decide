@@ -5,7 +5,7 @@ bool lic0(Points points, Parameters parameters) {
     Coordinate* last = &points[0];
     for (int i = 1; i < points.size(); i++) {
         Coordinate* current = &points[i];
-        double distance = current->distance(*last);  // todo: check distance between 2 coordinates
+        double distance = current->distance(*last);
         if (distance > length) {
             return true;
         }
