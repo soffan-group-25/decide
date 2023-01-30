@@ -12,6 +12,11 @@ bool lic7(Points points, Parameters parameters) {
   int kpts = parameters.KPTS;
   double length = parameters.LENGTH1;
 
+  // As per the specification, this should never happen.
+  // Therefore this counts as undefined behavior.
+  if (1 > kpts || kpts > npts - 2)
+    return false;
+
   // The condition is not met when NUMPOINTS < 3
   if (npts < 3)
     return false;
