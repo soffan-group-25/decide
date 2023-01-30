@@ -17,7 +17,7 @@ bool lic7(Points points, Parameters parameters) {
   Coordinate *last = &points[0];
 
   // Next point separated by kpts points.
-  for (int i = 2 + kpts; i < npts; i++) {
+  for (int i = 1 + kpts; i < npts; i++) {
     Coordinate *current = &points[i];
     double distance = current->distance(*last);
 
