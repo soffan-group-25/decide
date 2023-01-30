@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -I.
+CXXFLAGS := -I. -std=c++2a
 objects := decide/lics.o decide/decide.o
 # Testfiles to make/compile (e.g. decide.test). Ignore example.test.cpp.
 testfiles = $(filter-out decide/example.test, $(basename $(wildcard decide/*.test.cpp)))

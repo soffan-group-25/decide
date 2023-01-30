@@ -5,6 +5,7 @@
 /a.out
 *.o
 DECIDE
+!DECIDE/
 *.test
 
 # vscode workspace folder

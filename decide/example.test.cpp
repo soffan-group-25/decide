@@ -1,14 +1,13 @@
 #include <decide/lics.hpp>
 #include <cstdlib>
 
-void testLic0(){
-    lic0();
+void test(){
     if (true)
         std::exit(EXIT_FAILURE);
 }
 
 int main(){
-    testLic0();
-    // [...]
+    test();
+    
     return 0;
 }
