@@ -13,14 +13,14 @@ Parameters param{.QPTS=3, .QUADS=1};
 assert(lic4(points,param));
 }
 
-void test1_true(){
+void test2_true(){
 Points points{Coordinate(1, 1), Coordinate(0, -1), Coordinate(0, 2),Coordinate(-5, -4), Coordinate(1, -9), Coordinate(0, 0)};
 Parameters param{.QPTS=6, .QUADS=3};
 assert(lic4(points,param));
 }
 
-void test1_true(){
+void test3_false(){
 Points points{Coordinate(1, 1), Coordinate(1, 1), Coordinate(1, 1),Coordinate(1, 1), Coordinate(1, 1), Coordinate(1, 1)};
-Parameters param{.QPTS=3, .QUADS=1};
+Parameters param{.QPTS=3, .QUADS=2};
 assert(lic4(points,param));
 }
