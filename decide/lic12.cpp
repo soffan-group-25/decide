@@ -1,5 +1,5 @@
-#include <decide/decide.hpp>
 #include <cassert>
+#include <decide/decide.hpp>
 
 // There exists at least one set of two data points, separated by exactly K_PTS
 // consecutive intervening points, which are a distance greater than the length,
