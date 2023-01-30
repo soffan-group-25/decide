@@ -7,17 +7,22 @@
 bool contained_in_circle(Coordinate point1, Coordinate point2,
                          Coordinate point3, double RADIUS1) {
   int diameter = RADIUS1 * 2;
-  int lic_condition_met = false;
 
   // If two points are the same, check the distance between the other
   // points (this has to be <= RADIUS1*2 (diameter))
   // If the distance is low enough, we have met the criteria.
   if (point1 == point2) {
-    lic_condition_met |= point1.distance(point3) <= diameter;
+    if (point1.distance(point3) <= diameter) {
+      return true;
+    }
   } else if (point2 == point3) {
-    lic_condition_met |= point2.distance(point1) <= diameter;
+    if (point2.distance(point1) <= diameter) {
+      return true;
+    }
   } else if (point1 == point3) {
-    lic_condition_met |= point1.distance(point2) <= diameter;
+    if (point1.distance(point2) <= diameter) {
+      return true;
+    }
   }
 
   // If the three points are colinear, we check the longest distance
@@ -28,7 +33,9 @@ bool contained_in_circle(Coordinate point1, Coordinate point2,
     double dist =
         std::max(std::max(point1.distance(point2), point2.distance(point3)),
                  point1.distance(point3));
-    lic_condition_met |= dist <= diameter;
+    if (dist <= diameter) {
+      return true;
+    }
   }
 
   // If we have three distinct points (that are not colinear)
@@ -64,9 +71,11 @@ bool contained_in_circle(Coordinate point1, Coordinate point2,
   double centre_y = slope_perpendicular * centre_x + perpendicular_y_intercept;
 
   double radius = pointA.distance({centre_x, centre_y});
-  lic_condition_met |= radius <= RADIUS1;
+  if (radius <= RADIUS1) {
+    return true;
+  }
 
-  return lic_condition_met;
+  return false;
 }
 
 #endif
