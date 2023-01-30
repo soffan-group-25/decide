@@ -5,7 +5,9 @@
 of decision will be by quadrant number, i.e., I, II, III, IV. For example, the data point (0,0)
 is in quadrant I, the point (-l,0) is in quadrant II, the point (0,-l) is in quadrant III, the point
 (0,1) is in quadrant I and the point (1,0) is in quadrant I.*/
-bool lic4(Points points, int qpts, int quads){ 
+bool lic4(Points points, Parameters param){ 
+    int qpts=param.QPTS;
+    int quads=param.QUADS;
     int npts=points.size();
     if (qpts<2 || qpts>npts){
         return false;
