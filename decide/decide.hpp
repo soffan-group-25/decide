@@ -1,8 +1,8 @@
 #ifndef DECIDE_H
 #define DECIDE_H
 
-#include <vector>
 #include <cmath>
+#include <vector>
 
 // Type declarations
 //
@@ -13,6 +13,9 @@ typedef enum { ANDD,
 struct Coordinate {
     double x;
     double y;
+
+    Coordinate(double x, double y) : x(x), y(y) {
+    }
 
     // Get distance from this coordinate to `other` coordinate.
     double distance(const Coordinate& other) const {
@@ -46,14 +49,13 @@ typedef struct {
     double AREA2;    // MaximumareainLIC14
 } Parameters;
 
+typedef std::vector<Coordinate> Points;
+
 // Constants
 static const double pi = 3.1415926535;
 
 // Global variables - defined separately in decide.cpp
 //
-extern int numpoints;
-extern std::vector<Coordinate> points;
-extern Parameters parameters;
 extern std::vector<std::vector<Connector> > lcm;
 extern std::vector<bool> puv;
 
