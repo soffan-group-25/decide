@@ -1,4 +1,5 @@
 #include <decide/decide.hpp>
+#include <decide/utils.hpp>
 
 /* There exists at least one set of three consecutive data points that are the vertices of a triangle
 with area greater than AREA1.
@@ -13,7 +14,7 @@ bool lic3(Points points, Parameters param){
         Coordinate p1=points[i];
         Coordinate p2=points[i+1];
         Coordinate p3=points[i+2];
-        double area=(p1.x*(p2.y-p3.y)+p2.x*(p3.y-p1.y)+p3.x*(p1.y-p2.y))/2;
+        double area=triangleArea(p1,p2,p3);
         if (area<0){
             area=area*-1;
         }
