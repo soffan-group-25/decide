@@ -8,6 +8,7 @@ bool lic0(Points points, Parameters parameters);
 bool lic1(Points points, Parameters parameters);
 bool lic5(Points points, Parameters parameters);
 bool lic7(Points points, Parameters parameters);
+bool lic10(Points points, Parameters parameters);
 bool lic11(Points points, Parameters parameters);
 bool lic12(Points points, Parameters parameters);
 
