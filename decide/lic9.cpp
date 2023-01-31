@@ -12,28 +12,31 @@ is not satisfied by those three points. When NUMPOINTS < 5, the condition is not
 1 ≤ C PTS, 1 ≤ D PTS
 C PTS+D PTS ≤ NUMPOINTS−3*/
 
+double angle(Coordinate a, Coordinate b, Coordinate c){
+    double ax = a.x-b.x;
+    double ay=a.y-b.y;
+    double bx = a.x-c.x;
+    double by = a.y-c.y;
+    double top =(ax*bx)+(ay*by);
+    double bottom =sqrt(pow(ax,2)+pow(ay,2))*sqrt(pow(bx,2)+pow(by,2));
+    return acos(top/bottom);
+}
 bool lic9(Points points, Parameters parameters) {
     int c=parameters.CPTS+1;
     int d=parameters.DPTS+1;
     int numpoints= points.size();
     double epsilon=parameters.EPSILON;
-    if (numpoints<5|| c<1||d<1||(c+d)>(numpoints-3)){
+
+    if (numpoints<5 || c-1<1||d-1<1||(c+d)>(numpoints-1)){
         return false;
     }
-    for (int i=0; i<numpoints; i++){
-        if (i+c+d>numpoints){
-            return false;
-        }
-        Coordinate p1=points[i];
-        Coordinate p2=points[i+c];
-        Coordinate p3=points[i+c+d];
-        if (p1==p2||p1==p3){
+    for (int i=0; i+c+d <numpoints; i++){
+        
+        if (points[i]==points[i+c]||points[i+c]==points[i+c+d]){
             continue;
         }
-
-        double ang=angle(p1, p3);
-
-        if (ang<(pi-parameters.EPSILON) || ang>(pi+epsilon)) {
+        double ang=angle(points[i+c],points[i],points[i+c+d]);
+        if (ang<(pi-parameters.EPSILON) || ang>(pi+parameters.EPSILON)){
             return true;
         }
 
@@ -42,8 +45,3 @@ bool lic9(Points points, Parameters parameters) {
     return false;
 }
 
-double angle(Coordinate a, Coordinate b){
-    double top =(a.x*b.x)+(a.y*b.y);
-    double bottom =sqrt(pow(a.x,2)+pow(a.y,2))*sqrt(pow(b.x,2)+pow(b.y,2));
-    return acos(top/bottom);
-}
