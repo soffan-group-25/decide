@@ -26,7 +26,7 @@ format: $(wildcard decide/*.?pp)
 
 
 ### Testing
-%.test: %.test.cpp %.cpp
+%.test: %.test.cpp %.cpp decide/utils.cpp
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
 # Compile all test files together w/ normal file and run them
