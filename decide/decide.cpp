@@ -3,6 +3,27 @@
 #include <decide/lics.hpp>
 #include <iostream>
 
+CMV calculateCMV(Points points, Parameters parameters) {
+    CMV cmv(15);
+    cmv[0] = lic0(points, parameters);
+    cmv[1] = lic1(points, parameters);
+    cmv[2] = lic2(points, parameters);
+    cmv[3] = lic3(points, parameters);
+    cmv[4] = lic4(points, parameters);
+    cmv[5] = lic5(points, parameters);
+    cmv[6] = lic6(points, parameters);
+    cmv[7] = lic7(points, parameters);
+    cmv[8] = lic8(points, parameters);
+    cmv[9] = lic9(points, parameters);
+    cmv[10] = lic10(points, parameters);
+    cmv[11] = lic11(points, parameters);
+    cmv[12] = lic12(points, parameters);
+    cmv[13] = lic13(points, parameters);
+    cmv[14] = lic14(points, parameters);
+
+    return cmv;
+}
+
 PUM calculatePUM(CMV cmv, LCM lcm) {
   int n = cmv.size();
 
