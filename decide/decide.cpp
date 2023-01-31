@@ -1,3 +1,4 @@
+#include <cassert>
 #include <decide/decide.hpp>
 #include <decide/lics.hpp>
 #include <iostream>
