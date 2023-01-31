@@ -8,4 +8,12 @@ void test_angle_90_degree() {
   assert((angle - pi / 4.0) < 1e-10);
 }
 
-int main() { test_angle_90_degree(); }
+void test_triangle_area() {
+  double a = triangleArea(Coordinate(1, 2), Coordinate(-1, 1), Coordinate(0, 5));
+  assert(a == 3.5);
+}
+
+int main() { 
+  test_triangle_area();
+  test_angle_90_degree();
+}
