@@ -7,14 +7,14 @@
 void test_true_instance() {
   Points points{Coordinate(0, 0), Coordinate(1, 1), Coordinate(20, 0),
                 Coordinate(1, 1), Coordinate(1, 1), Coordinate(10, 10)};
-  Parameters parameters{.EPTS = 1, .FPTS = 2, .AREA1 = 99};
+  Parameters parameters{.AREA1 = 99, .EPTS = 1, .FPTS = 2};
   assert(lic10(points, parameters));
 }
 
 void test_false_instance() {
   Points points{Coordinate(0, 0), Coordinate(1, 1), Coordinate(20, 0),
                 Coordinate(1, 1), Coordinate(1, 1), Coordinate(10, 10)};
-  Parameters parameters{.EPTS = 1, .FPTS = 2, .AREA1 = 101};
+  Parameters parameters{.AREA1 = 101, .EPTS = 1, .FPTS = 2};
   assert(!lic10(points, parameters));
 }
 
