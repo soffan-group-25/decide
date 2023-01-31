@@ -21,14 +21,33 @@ CMV calculateCMV(Points points, Parameters parameters);
 PUM calculatePUM(CMV cmv, LCM lcm);
 FUV calculateFUV(PUM &pum, PUV &puv);
 
+/* This tests that every element in CMV is equal to the lic it should be equal
+ * to This test should be enough if we assume that the LIC functions themselves
+ * are correct, which we can do because they are tested separately
+ */
 void test_cmv() {
   Points points{Coordinate{0, 0},     Coordinate{2, 2},  Coordinate{3, 2},
                 Coordinate{100, 100}, Coordinate{4, 4},  Coordinate{3245, 232},
                 Coordinate{529, 234}, Coordinate{50, 1}, Coordinate{12, 12}};
-  Parameters parameters{.LENGTH1 = 5, .RADIUS1 = 49, .EPSILON = 3, .AREA1 = 50,
-      .QPTS = 2, .QUADS = 2, .DIST = 6, .NPTS = 3, .KPTS = 1, .APTS = 2, .BPTS = 3,
-      .CPTS = 1, .DPTS = 1, .EPTS = 1, .FPTS = 1, .GPTS = 2, .LENGTH2 = 8,
-      .RADIUS2 = 7.5, .AREA2 = 20};
+  Parameters parameters{.LENGTH1 = 5,
+                        .RADIUS1 = 49,
+                        .EPSILON = 3,
+                        .AREA1 = 50,
+                        .QPTS = 2,
+                        .QUADS = 2,
+                        .DIST = 6,
+                        .NPTS = 3,
+                        .KPTS = 1,
+                        .APTS = 2,
+                        .BPTS = 3,
+                        .CPTS = 1,
+                        .DPTS = 1,
+                        .EPTS = 1,
+                        .FPTS = 1,
+                        .GPTS = 2,
+                        .LENGTH2 = 8,
+                        .RADIUS2 = 7.5,
+                        .AREA2 = 20};
   CMV cmv = calculateCMV(points, parameters);
 
   assert(cmv[0] = lic0(points, parameters));
