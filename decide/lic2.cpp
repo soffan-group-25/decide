@@ -28,7 +28,7 @@ bool lic2(Points points, Parameters parameters) {
         if (points[i+1]==points[i]||points[i+1]==points[i+2]){
             continue;
         }
-        double ang=angle(points[i],points[i+1],points[i+2]);
+        double ang=angle(points[i+1],points[i],points[i+2]);
         if (ang<(pi-parameters.EPSILON) || ang>(pi+parameters.EPSILON)){
             return true;
         } 
