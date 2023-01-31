@@ -1,3 +1,4 @@
+#include <cassert>
 #include <decide/decide.hpp>
 #include <decide/lics.hpp>
 #include <iostream>
@@ -34,6 +35,32 @@ PUM calculatePUM(CMV cmv, LCM lcm) {
   }
 
   return pum;
+}
+
+FUV calculateFUV(PUM &pum, PUV &puv) {
+  int n = pum.size();
+  FUV fuv(n);
+
+  for (int i = 0; i < n; i++) {
+    fuv[i] = true;
+
+    // FUV[i] should be set to true if PUV[i] is false ...
+    if (!puv[i]) {
+      fuv[i] = true;
+      continue;
+    }
+
+    // ... or if all elements in row PUM[i] are true.
+    for (int j = 0; j < n; j++) {
+      if (!pum[i][j]) {
+        // One element is false, exit.
+        fuv[i] = false;
+        break;
+      }
+    }
+  }
+
+  return fuv;
 }
 
 /// This is the main function used to decide whether to launch an interceptor

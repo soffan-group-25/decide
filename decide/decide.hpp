@@ -14,6 +14,7 @@ typedef std::vector<bool> CMV;
 typedef std::vector<std::vector<bool>> PUM;
 typedef std::vector<std::vector<Connector>> LCM;
 typedef std::vector<bool> PUV;
+typedef std::vector<bool> FUV;
 
 struct Coordinate {
   double x;
