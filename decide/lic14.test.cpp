@@ -13,7 +13,7 @@ void test_false_instance1() {
       Coordinate(0, 0),  Coordinate(0, 0), Coordinate(5, -6), Coordinate(0, 0),
       Coordinate(0, 0),  Coordinate(0, 0)};
   Parameters parameters{.AREA1 = 500, .EPTS = 2, .FPTS = 3, .AREA2 = 0};
-  assert(lic14(points, parameters));
+  assert(!lic14(points, parameters));
 }
 
 // first area is wrong
@@ -23,7 +23,7 @@ void test_false_instance2() {
                 Coordinate(1, -2), Coordinate(0, 0),  Coordinate(3, 4),
                 Coordinate(0, 0),  Coordinate(5, -6), Coordinate(0, 0)};
   Parameters parameters{.AREA1 = 500, .EPTS = 1, .FPTS = 1, .AREA2 = 500};
-  assert(lic14(points, parameters));
+  assert(!lic14(points, parameters));
 }
 
 // second area is wrong
@@ -35,7 +35,7 @@ void test_false_instance3() {
       Coordinate(0, 0),  Coordinate(0, 0), Coordinate(0, 0), Coordinate(3, 4),
       Coordinate(0, 0),  Coordinate(0, 0), Coordinate(5, -6)};
   Parameters parameters{.AREA1 = 0, .EPTS = 3, .FPTS = 2, .AREA2 = 0};
-  assert(lic14(points, parameters));
+  assert(!lic14(points, parameters));
 }
 
 // not enough points
@@ -49,7 +49,7 @@ void test_false_instance4() {
       Coordinate(0, 0),  Coordinate(0, 0), Coordinate(5, -6), Coordinate(0, 0),
       Coordinate(0, 0),  Coordinate(0, 0)};
   Parameters parameters{.AREA1 = 0, .EPTS = 7, .FPTS = 18, .AREA2 = 500};
-  assert(lic14(points, parameters));
+  assert(!lic14(points, parameters));
 }
 
 // not enough points
@@ -57,7 +57,7 @@ void test_false_instance4() {
 void test_false_instance5() {
   Points points{Coordinate(1, -2), Coordinate(0, 0), Coordinate(0, 0)};
   Parameters parameters{.AREA1 = 2, .EPTS = 2, .FPTS = 2, .AREA2 = 0};
-  assert(lic14(points, parameters));
+  assert(!lic14(points, parameters));
 }
 
 // the triangles are different
