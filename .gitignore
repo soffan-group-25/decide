@@ -4,8 +4,7 @@
 # Compiled files
 /a.out
 *.o
-DECIDE
-!DECIDE/
+decide_binary
 *.test
 
 # vscode workspace folder

@@ -1,7 +1,13 @@
-// Use forward declaration rather than #include since we only need one function
-void decide();
+#include <decide/decide.hpp>
 
-int main(){
-    decide();
-    return 0;
+int main() {
+  CMV cmv;
+  LCM lcm;
+  PUV puv;
+  
+  PUM pum = calculatePUM(cmv, lcm);
+  FUV fuv = calculateFUV(pum, puv);
+
+  decide(fuv);
+  return 0;
 }
