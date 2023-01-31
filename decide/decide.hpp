@@ -6,7 +6,14 @@
 
 // Type declarations
 //
+struct Coordinate;
+
 typedef enum { ANDD, ORR, NOTUSED } Connector;
+typedef std::vector<Coordinate> Points;
+typedef std::vector<bool> CMV;
+typedef std::vector<std::vector<bool>> PUM;
+typedef std::vector<std::vector<Connector>> LCM;
+typedef std::vector<bool> PUV;
 
 struct Coordinate {
   double x;
@@ -20,7 +27,7 @@ struct Coordinate {
   }
 
   // Pointers are only used because `this` defaults to a pointer.
-  bool operator==(const Coordinate &c2) {
+  bool operator==(const Coordinate &c2) const {
     return this->x == c2.x && this->y == c2.y;
   }
   bool operator!=(const Coordinate &c2) { return !(*this == c2); }
@@ -52,15 +59,8 @@ typedef struct {
   double AREA2;   // MaximumareainLIC14
 } Parameters;
 
-typedef std::vector<Coordinate> Points;
-
 // Constants
 static const double pi = 3.1415926535;
-
-// Global variables - defined separately in decide.cpp
-//
-extern std::vector<std::vector<Connector>> lcm;
-extern std::vector<bool> puv;
 
 // Functions
 void decide(void);
