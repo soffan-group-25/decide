@@ -50,21 +50,21 @@ void test_cmv() {
                         .AREA2 = 20};
   CMV cmv = calculateCMV(points, parameters);
 
-  assert(cmv[0] = lic0(points, parameters));
-  assert(cmv[1] = lic1(points, parameters));
-  assert(cmv[2] = lic2(points, parameters));
-  assert(cmv[3] = lic3(points, parameters));
-  assert(cmv[4] = lic4(points, parameters));
-  assert(cmv[5] = lic5(points, parameters));
-  assert(cmv[6] = lic6(points, parameters));
-  assert(cmv[7] = lic7(points, parameters));
-  assert(cmv[8] = lic8(points, parameters));
-  assert(cmv[9] = lic9(points, parameters));
-  assert(cmv[10] = lic10(points, parameters));
-  assert(cmv[11] = lic11(points, parameters));
-  assert(cmv[12] = lic12(points, parameters));
-  assert(cmv[13] = lic13(points, parameters));
-  assert(cmv[14] = lic14(points, parameters));
+  assert(cmv[0] == lic0(points, parameters));
+  assert(cmv[1] == lic1(points, parameters));
+  assert(cmv[2] == lic2(points, parameters));
+  assert(cmv[3] == lic3(points, parameters));
+  assert(cmv[4] == lic4(points, parameters));
+  assert(cmv[5] == lic5(points, parameters));
+  assert(cmv[6] == lic6(points, parameters));
+  assert(cmv[7] == lic7(points, parameters));
+  assert(cmv[8] == lic8(points, parameters));
+  assert(cmv[9] == lic9(points, parameters));
+  assert(cmv[10] == lic10(points, parameters));
+  assert(cmv[11] == lic11(points, parameters));
+  assert(cmv[12] == lic12(points, parameters));
+  assert(cmv[13] == lic13(points, parameters));
+  assert(cmv[14] == lic14(points, parameters));
 }
 
 void assert_pum_equal(PUM &p1, PUM &p2) {
