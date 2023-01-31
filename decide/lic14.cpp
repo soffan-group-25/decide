@@ -14,7 +14,7 @@ bool lic14(Points points, Parameters param){
     int e=param.EPTS+1;
     int f=param.FPTS+1;
     
-    if (npts<5 || area2<= 0){
+    if (npts<5 || area2< 0){
         return false;
     }
 
