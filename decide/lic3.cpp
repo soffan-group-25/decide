@@ -7,7 +7,7 @@ with area greater than AREA1.
 
 bool lic3(Points points, Parameters param){
     double area1=param.AREA1;
-    if (area1>0||points.size()<3){
+    if (area1<0||points.size()<3){
         return false;
     }
     for (int i=0; i <points.size()-2; i++){
