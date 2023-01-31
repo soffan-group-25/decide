@@ -20,8 +20,15 @@ double angle(Coordinate a, Coordinate b, Coordinate c){
 }
 
 bool lic2(Points points, Parameters parameters) {
+    if (points.size()<3||parameters.EPSILON<0||parameters.EPSILON>pi){
+        return false;
+    }
     for (int i=0; i <points.size()-2; i++){
-        double ang=angle(points[i+1,i,i+2]);
+        //return false if the end points are the same as the vertex
+        if (points[i+1]==points[i]||points[i]==points[i+2]){
+            return false;
+        }
+        double ang=angle(points[i+1],points[i],points[i+2]);
         if (ang<(pi-parameters.EPSILON) || ang>(pi+parameters.EPSILON)){
             return true;
         } 
