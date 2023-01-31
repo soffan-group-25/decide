@@ -15,9 +15,6 @@ bool lic3(Points points, Parameters param){
         Coordinate p2=points[i+1];
         Coordinate p3=points[i+2];
         double area=triangleArea(p1,p2,p3);
-        if (area<0){
-            area=area*-1;
-        }
         if (area>area1){
             return true;
         }
