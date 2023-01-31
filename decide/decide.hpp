@@ -65,6 +65,7 @@ static const double pi = 3.1415926535;
 
 // Functions
 void decide(FUV &fuv);
+CMV calculateCMV(Points points, Parameters parameters);
 PUM calculatePUM(CMV cmv, LCM lcm);
 FUV calculateFUV(PUM &pum, PUV &puv);
 
