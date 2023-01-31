@@ -1,5 +1,7 @@
+#include <cmath>
 #include <decide/utils.hpp>
 
+/* The first argument is the vertex of the angle */
 double angle_between_points(Coordinate A, Coordinate B, Coordinate C) {
   if (A.x == B.x && A.y == B.y)
     return 0.0;
@@ -12,7 +14,7 @@ double angle_between_points(Coordinate A, Coordinate B, Coordinate C) {
 
   double a = atan2(B.y - A.y, B.x - A.x);
   double b = atan2(C.y - A.y, C.x - A.x);
-  return b - a;
+  return abs(b - a);
 }
 
 double triangleArea(Coordinate p1, Coordinate p2, Coordinate p3) {

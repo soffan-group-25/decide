@@ -9,6 +9,7 @@
 
 // Given three points returns the angle formed by the triangle a --> b --> c
 // expressed in radians.
+// The first argument is the vertex of the angle
 double angle_between_points(Coordinate A, Coordinate B, Coordinate C);
 
 // Calculates the area of a triangle
