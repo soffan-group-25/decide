@@ -31,7 +31,7 @@ void test_distance_from_point() {
 void test_true_instance() {
   Points points{Coordinate(-1, 0), Coordinate(0, 0), Coordinate(5, 11),
                 Coordinate(10, 0), Coordinate(11, 0)};
-  Parameters parameters{.NPTS = 1, .DIST = 10.0};
+  Parameters parameters{.DIST = 10.0, .NPTS = 1};
   assert(lic6(points, parameters));
 }
 
@@ -41,7 +41,7 @@ void test_true_instance() {
 void test_false_instance() {
   Points points{Coordinate(-1, 0), Coordinate(0, 0), Coordinate(5, 9),
                 Coordinate(10, 0), Coordinate(11, 0)};
-  Parameters parameters{.NPTS = 1, .DIST = 10.0};
+  Parameters parameters{.DIST = 10.0, .NPTS = 1};
   assert(!lic6(points, parameters));
 }
 
