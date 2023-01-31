@@ -20,7 +20,7 @@ double angle(Coordinate a, Coordinate b, Coordinate c){
 }
 
 bool lic2(Points points, Parameters parameters) {
-    if (points.size()<3||parameters.EPSILON<0||parameters.EPSILON>pi){
+    if (points.size()<3||parameters.EPSILON<0||parameters.EPSILON>=pi){
         return false;
     }
     for (int i=0; i <points.size()-2; i++){
