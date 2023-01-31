@@ -60,22 +60,23 @@ bool unique(int arr[], int goal, int size) {
 
 bool lic4(Points points, Parameters param) {
   int qpts = param.QPTS;
+  int quads = param.QUADS;
   int npts = points.size();
-  if (qpts < 2 || qpts > npts) {
+
+  if (qpts < 2 || qpts > npts)
     return false;
-  }
-  if (1 <= param.QUADS <= 3) {
+
+  if (1 <= quads && quads <= 3) {
     for (int i = 0; i + qpts - 1 < npts; i++) {
       int position[qpts];
-      for (int a = 0; a < qpts; a++) {
+
+      for (int a = 0; a < qpts; a++)
         position[a] = quad(points[i + a]);
-      }
-      if (unique(position, param.QUADS, qpts)) {
+
+      if (unique(position, param.QUADS, qpts))
         return true;
-      }
     }
-    return false;
-  } else {
-    return false;
   }
+
+  return false;
 }
