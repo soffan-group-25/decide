@@ -41,5 +41,6 @@
 
 ## GitHub Setup
 
-All PRs use squash merges. There is no automatic block against merging PRs that
-haven't been reviewed. This needs to be handled manually.
+All PRs use squash merges. There is an automatic block against merging PRs that
+haven't been approved by at least one other person, and so the author should
+request a reviewer when they deem the PR ready for merging.
