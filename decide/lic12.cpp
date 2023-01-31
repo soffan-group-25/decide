@@ -8,9 +8,9 @@ bool criteria1(Points &points, int kpts, int length) {
   int npts = points.size();
 
   // Next point separated by kpts points.
-  for (int i = 1; i < npts - kpts; i++) {
+  for (int i = 0; i < npts - kpts - 1; i++) {
     Coordinate &first = points[i];
-    Coordinate &second = points[i + kpts];
+    Coordinate &second = points[i + kpts + 1];
     double distance = first.distance(second);
 
     // There exists a set of two data points separated
@@ -29,9 +29,9 @@ bool criteria2(Points &points, int kpts, int length) {
   int npts = points.size();
 
   // Next point separated by kpts points.
-  for (int i = 0; i < npts - kpts; i++) {
+  for (int i = 0; i < npts - kpts - 1; i++) {
     Coordinate &first = points[i];
-    Coordinate &second = points[i + kpts];
+    Coordinate &second = points[i + kpts + 1];
     double distance = first.distance(second);
 
     // There exists a set of two data points separated
