@@ -51,7 +51,7 @@ FUV calculateFUV(PUM &pum, PUV &puv) {
 
     // ... or if all elements in row PUM[i] are true.
     for (int j = 0; j < n; j++) {
-      if (pum[i][j]) {
+      if (!pum[i][j]) {
         // One element is false, exit.
         fuv[i] = false;
         break;
