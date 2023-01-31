@@ -3,6 +3,9 @@ CXXFLAGS := -I. -std=c++2a
 objects := $(addsuffix .o, $(filter-out decide/main, $(basename $(filter-out $(wildcard decide/*.test.cpp), $(wildcard decide/*.cpp)))))
 # Testfiles to make/compile (e.g. decide.test). Ignore example.test.cpp.
 testfiles = $(filter-out decide/example.test, $(basename $(wildcard decide/*.test.cpp)))
+# Colouring
+col_failed=$(shell echo -e "\033[0;33m")
+col_revert=$(shell echo -e "\033[0m")
 
 ### Main program
 decide: decide_binary
@@ -36,7 +39,11 @@ decide/decide.test: $(objects) decide/decide.test.cpp
 # Compile all test files together w/ normal file and run them
 # use @ for silent running
 test_runner: $(testfiles)
-	@for f in $^; do eval $${f} || (echo "Test failed for $${f}" && exit 1); done
+	@err=0; \
+	for f in $^; do \
+	./$$f && continue || err=$$? && echo "$(col_failed)Warning: Test failed for $$f$(col_revert)"; \
+	done; \
+	[ $$err -eq 0 ] || exit $$err
 
 test: test_runner
 	@echo "Ran tests for:"
