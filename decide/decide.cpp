@@ -78,8 +78,8 @@ void decide(FUV &fuv) {
   }
 
   if (launch) {
-    printf("YES\n");
+    std::cout << "YES" << std::endl;
   } else {
-    printf("NO\n");
+    std::cout << "NO" << std::endl;
   }
 }
