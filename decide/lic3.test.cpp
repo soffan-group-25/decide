@@ -32,7 +32,6 @@ void test_false_instance2() {
 
 void test_false_instance3() {
   Points points{Coordinate(1, -2), Coordinate(3, 4), Coordinate(5, -6)};
-  ;
   Parameters parameters{.AREA1 = 200};
   assert(!lic3(points, parameters));
 }
