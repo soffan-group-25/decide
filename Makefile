@@ -5,6 +5,7 @@ objects := $(addsuffix .o, $(filter-out decide/main, $(basename $(filter-out $(w
 testfiles = $(filter-out decide/example.test, $(basename $(wildcard decide/*.test.cpp)))
 # Colouring
 col_failed=$(shell echo -e "\033[0;33m")
+col_success=$(shell echo -e "\033[0;32m")
 col_revert=$(shell echo -e "\033[0m")
 
 ### Main program
@@ -48,7 +49,7 @@ test_runner: $(testfiles)
 test: test_runner
 	@echo "Ran tests for:"
 	@echo "$(testfiles)"
-	@echo "Tests OK."
+	@echo "$(col_success)Tests OK.$(col_revert)"
 
 
 ### Cleanup
