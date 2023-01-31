@@ -5,7 +5,7 @@
  * PTS and B PTS consecutive intervening points, respectively, that cannot be
  * contained within or on a circle of radius RADIUS1.
  */
-bool criteria1(Points &points, int apts, int bpts, int r1) {
+bool criteria1(Points &points, int apts, int bpts, double r1) {
   for (int i = 0; i < points.size() - bpts - apts - 2; i++) {
     int idx1 = i;
     int idx2 = idx1 + apts + 1;
@@ -22,7 +22,7 @@ bool criteria1(Points &points, int apts, int bpts, int r1) {
  * exactly A PTS and B PTS consecutive intervening points, respectively, that
  * can be contained in or on a circle of radius RADIUS2.
  */
-bool criteria2(Points &points, int apts, int bpts, int r2) {
+bool criteria2(Points &points, int apts, int bpts, double r2) {
   for (int i = 0; i < points.size() - bpts - apts - 2; i++) {
     int idx1 = i;
     int idx2 = idx1 + apts + 1;
@@ -39,7 +39,7 @@ bool criteria2(Points &points, int apts, int bpts, int r2) {
  */
 bool lic13(Points points, Parameters parameters) {
   int apts = parameters.APTS;
-  int bpts = parameters.KPTS;
+  int bpts = parameters.BPTS;
   double r1 = parameters.RADIUS1;
   double r2 = parameters.RADIUS2;
 
