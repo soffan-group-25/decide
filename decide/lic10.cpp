@@ -1,4 +1,5 @@
 #include <decide/decide.hpp>
+#include <decide/utils.hpp>
 
 bool lic10(Points points, Parameters params) {
   int n = points.size();
@@ -14,10 +15,7 @@ bool lic10(Points points, Parameters params) {
     Coordinate &second = points[i + 1 + epts];
     Coordinate &third = points[i + 1 + epts + 1 + fpts];
 
-    double area =
-        abs((first.x * (second.y - third.y) + second.x * (third.y - first.y) +
-             third.x * (first.y - second.y)) /
-            2);
+    double area = triangleArea(first, second, third);
 
     if (area > area1)
       return true;
