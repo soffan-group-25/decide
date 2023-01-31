@@ -64,6 +64,8 @@ typedef struct {
 static const double pi = 3.1415926535;
 
 // Functions
-void decide(void);
+void decide(FUV &fuv);
+PUM calculatePUM(CMV cmv, LCM lcm);
+FUV calculateFUV(PUM &pum, PUV &puv);
 
 #endif

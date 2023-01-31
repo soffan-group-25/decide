@@ -5,15 +5,15 @@ objects := $(addsuffix .o, $(filter-out decide/main, $(basename $(filter-out $(w
 testfiles = $(filter-out decide/example.test, $(basename $(wildcard decide/*.test.cpp)))
 
 ### Main program
-decide: DECIDE
+decide: decide_binary
 
 # $^ = all prereqs (i.e. all *.o-files)
-DECIDE: $(objects) decide/main.o
+decide_binary: $(objects) decide/main.o
 	$(CXX) $^ -o $@ $(CXXFLAGS)
 
 # Separate rule for main.o as it has no main.hpp
 %/main.o: %/main.cpp
-	$(CXX) -o $@ -c $<
+	$(CXX) -o $@ -c $< $(CXXFLAGS)
 
 # $@ = target, $< = first prereq (catch all != main.o)
 %.o: %.cpp %.hpp
