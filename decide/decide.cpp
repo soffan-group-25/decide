@@ -58,6 +58,8 @@ FUV calculateFUV(PUM &pum, PUV &puv) {
       }
     }
   }
+
+  return fuv;
 }
 
 /// This is the main function used to decide whether to launch an interceptor
