@@ -1,4 +1,5 @@
 #include <decide/decide.hpp>
+#include <decide/utils.hpp>
 
 /*There exists at least one set of three data points, separated by exactly E PTS
 and F PTS consecutive intervening points, respectively, that are the vertices of
@@ -14,41 +15,26 @@ bool lic14(Points points, Parameters param) {
   int npts = points.size();
   int area1 = param.AREA1;
   int area2 = param.AREA2;
-  int e = param.EPTS + 1;
-  int f = param.FPTS + 1;
+  int epts = param.EPTS;
+  int fpts = param.FPTS;
 
   if (npts < 5 || area2 < 0) {
     return false;
   }
 
-  bool first;
-  bool second;
-  int area;
+  bool first = false;
+  bool second = false;
+  double area;
 
-  for (int i = 0; i < npts; i++) {
-    if (i + e + f > npts) {
-      return false;
-    }
+  for (int i = 0; i + epts + fpts + 2 < npts; i++) {
     Coordinate p1 = points[i];
-    Coordinate p2 = points[i + e];
-    Coordinate p3 = points[i + e + f];
-    area =
-        (p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)) /
-        2;
-    if (area < 0) {
-      area = area * -1;
-    }
+    Coordinate p2 = points[i + epts + 1];
+    Coordinate p3 = points[i + epts + fpts + 2];
+    area = triangleArea(p1, p2, p3);
 
-    if (!first) {
-      if (area > area1) {
-        first = true;
-      }
-    }
-    if (!second) {
-      if (area < area2) {
-        second = true;
-      }
-    } else if (first && second) {
+    first |= (area > area1);
+    second |= (area < area2);
+    if (first && second) {
       return true;
     }
   }
