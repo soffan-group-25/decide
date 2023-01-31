@@ -144,6 +144,7 @@ void test_decide() {
 }
 
 int main() {
+  test_cmv();
   test_pum();
   test_fuv();
   test_decide();

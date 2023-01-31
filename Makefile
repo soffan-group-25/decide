@@ -26,6 +26,10 @@ format: $(wildcard decide/*.?pp)
 
 
 ### Testing
+#Special case for decide.test as it uses all LICs
+decide/decide.test: $(objects) decide/decide.test.cpp
+	$(CXX) -o $@ $^ $(CXXFLAGS)
+
 %.test: %.test.cpp %.cpp decide/utils.cpp
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
