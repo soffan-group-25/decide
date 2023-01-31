@@ -15,9 +15,9 @@ bool lic10(Points points, Parameters params) {
     Coordinate &third = points[i + 1 + epts + 1 + fpts];
 
     double area =
-        (first.x * (second.y - third.y) + second.x * (third.y - first.y) +
-         third.x * (first.y - second.y)) /
-        2;
+        abs((first.x * (second.y - third.y) + second.x * (third.y - first.y) +
+             third.x * (first.y - second.y)) /
+            2);
 
     if (area > area1)
       return true;
