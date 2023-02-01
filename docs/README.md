@@ -33,6 +33,9 @@ Our way of working according to the Essence standard is [documented here](./ESSE
 See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to contribute.
 
 ### Daniel Williams
+- Initial code skeleton
+- Makefile
+- LICs 1 and 8
 
 ### Didrik Munther
 
