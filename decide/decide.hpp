@@ -39,25 +39,25 @@ struct Coordinate {
  * declare it as `void DECIDE(void)`, so what they mean by "parameters" is most
  * likely "the data used to decide", not "function arguments". */
 typedef struct {
-  double LENGTH1; // LengthinLICs0,7,12
-  double RADIUS1; // RadiusinLICs1,8,13
-  double EPSILON; // DeviationfromPIinLICs2,9
-  double AREA1;   // AreainLICs3,10,14
-  int QPTS;       // No.ofconsecutivepointsinLIC4
-  int QUADS;      // No.ofquadrantsinLIC4
-  double DIST;    // DistanceinLIC6
-  int NPTS;       // No.ofconsecutivepts.inLIC6
-  int KPTS;       // No.ofint.pts.inLICs7,12
-  int APTS;       // No.ofint.pts.inLICs8,13
-  int BPTS;       // No.ofint.pts.inLICs8,13
-  int CPTS;       // No.ofint.pts.inLIC9
-  int DPTS;       // No.ofint.pts.inLIC9
-  int EPTS;       // No.ofint.pts.inLICs10,14
-  int FPTS;       // No.ofint.pts.inLICs10,14
-  int GPTS;       // No.ofint.pts.inLIC11
-  double LENGTH2; // MaximumlengthinLIC12
-  double RADIUS2; // MaximumradiusinLIC13
-  double AREA2;   // MaximumareainLIC14
+  double LENGTH1 = 0; // LengthinLICs0,7,12
+  double RADIUS1 = 0; // RadiusinLICs1,8,13
+  double EPSILON = 0; // DeviationfromPIinLICs2,9
+  double AREA1 = 0;   // AreainLICs3,10,14
+  int QPTS = 2;       // No.ofconsecutivepointsinLIC4
+  int QUADS = 1;      // No.ofquadrantsinLIC4
+  double DIST = 0;    // DistanceinLIC6
+  int NPTS = 3;       // No.ofconsecutivepts.inLIC6
+  int KPTS = 1;       // No.ofint.pts.inLICs7,12
+  int APTS = 1;       // No.ofint.pts.inLICs8,13
+  int BPTS = 1;       // No.ofint.pts.inLICs8,13
+  int CPTS = 1;       // No.ofint.pts.inLIC9
+  int DPTS = 1;       // No.ofint.pts.inLIC9
+  int EPTS = 1;       // No.ofint.pts.inLICs10,14
+  int FPTS = 1;       // No.ofint.pts.inLICs10,14
+  int GPTS = 1;       // No.ofint.pts.inLIC11
+  double LENGTH2 = 0; // MaximumlengthinLIC12
+  double RADIUS2 = 0; // MaximumradiusinLIC13
+  double AREA2 = 0;   // MaximumareainLIC14
 } Parameters;
 
 // Constants
