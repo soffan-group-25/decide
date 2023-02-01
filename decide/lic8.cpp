@@ -21,10 +21,10 @@ bool lic8(Points points, Parameters parameters) {
     return false;
   }
 
-  for (int i = 0; i < points.size() - (apts + bpts + 2); ++i) {
-    if (contained_in_circle(points[i], points[i + apts + 1],
-                            points[i + apts + 1 + bpts + 1],
-                            parameters.RADIUS1)) {
+  for (int i = 0; i < points.size() - (apts + bpts + 2); i++) {
+    if (!contained_in_circle(points[i], points[i + apts + 1],
+                             points[i + apts + 1 + bpts + 1],
+                             parameters.RADIUS1)) {
       return true;
     }
   }
