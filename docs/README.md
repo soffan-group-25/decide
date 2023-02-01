@@ -32,12 +32,33 @@ Our way of working according to the Essence standard is [documented here](./ESSE
 
 See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to contribute.
 
+For a more detailed breakdown of the contributions, see the project's [Insights page](https://github.com/soffan-group-25/decide/pulse).
+
 ### Daniel Williams
+- Initial code skeleton
+- Makefile primary maintainer
+- LICs 1 and 8
 
 ### Didrik Munther
+- LICs 0, 6, 7, 10, 11, 12
+- Types
+- Work on Makefile
+- PUM, FUV, decide
 
 ### Hannah Burak
+- LICs 2, 3, 4, 9, 14
+- bug fixes
 
 ### Håvard Alstadheim
+- Bug fixes on util functions, and on LIC 14
+- LICs 5 and 13
+- Calculate CMV
+- Initial README.md
+- Write CONTRIBUTING.md and ESSENCE.md
+- Add special case `decide.cpp.test` Makefile target
+- Fix compilation bugs (syntax errors, missing includes)
 
 ### Pontus Söderlund
+- Utility funcrions
+- README
+- bug fixes
