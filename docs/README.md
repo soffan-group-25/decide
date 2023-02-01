@@ -31,10 +31,11 @@ Our way of working according to the Essence standard is [documented here](./ESSE
 ## Statement of Contributions
 
 See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to contribute.
+For a more detailed breakdown, see the project's [Insights page](https://github.com/soffan-group-25/decide/pulse).
 
 ### Daniel Williams
 - Initial code skeleton
-- Makefile
+- Makefile primary maintainer
 - LICs 1 and 8
 
 ### Didrik Munther
