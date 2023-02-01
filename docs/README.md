@@ -44,6 +44,8 @@ See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to con
 - PUM, FUV, decide
 
 ### Hannah Burak
+- LICs 2, 3, 4, 9, 14
+-bug fixes
 
 ### Håvard Alstadheim
 - Bug fixes on util functions, and on LIC 14
