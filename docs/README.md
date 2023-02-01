@@ -46,5 +46,12 @@ See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to con
 ### Hannah Burak
 
 ### Håvard Alstadheim
+- Bug fixes on util functions, and on LIC 14
+- LICs 5 and 13
+- Calculate CMV
+- Initial README.md
+- Write CONTRIBUTING.md and ESSENCE.md
+- Add special case `decide.cpp.test` Makefile target
+- Fix compilation bugs (syntax errors, missing includes)
 
 ### Pontus Söderlund
