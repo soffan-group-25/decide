@@ -59,3 +59,6 @@ For a more detailed breakdown of the contributions, see the project's [Insights 
 - Fix compilation bugs (syntax errors, missing includes)
 
 ### Pontus Söderlund
+- Utility funcrions
+- README
+- bug fixes
