@@ -6,6 +6,9 @@
 /* A vector with the return values of all the LIC functions
  */
 CMV calculateCMV(Points points, Parameters parameters) {
+  // Required for all LICs
+  assert(points.size() > 1);
+
   CMV cmv(15);
   cmv[0] = lic0(points, parameters);
   cmv[1] = lic1(points, parameters);
