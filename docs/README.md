@@ -38,6 +38,10 @@ See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to con
 - LICs 1 and 8
 
 ### Didrik Munther
+- LICs 0, 6, 7, 10, 11, 12
+- Types
+- Work on Makefile
+- PUM, FUV, decide
 
 ### Hannah Burak
 
