@@ -14,13 +14,13 @@ double angle_between_points(Coordinate A, Coordinate B, Coordinate C) {
 
   double a = atan2(B.y - A.y, B.x - A.x);
   double b = atan2(C.y - A.y, C.x - A.x);
-  return abs(b - a);
+  return std::abs(b - a);
 }
 
 double triangleArea(Coordinate p1, Coordinate p2, Coordinate p3) {
   // See https://www.omnicalculator.com/math/area-triangle-coordinates
-  return (1.0 / 2.0) * abs(p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) +
-                           p3.x * (p1.y - p2.y));
+  return (1.0 / 2.0) * std::abs(p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) +
+                                p3.x * (p1.y - p2.y));
 }
 
 bool contained_in_circle(Coordinate point1, Coordinate point2,

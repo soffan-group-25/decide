@@ -4,21 +4,29 @@
 
 void test_angle_90_degree() {
   double angle = angle_between_points(Coordinate(0, 1), Coordinate(0, 0),
-                                      Coordinate(1, 0));
-  assert((angle - pi / 4.0) < 1e-10);
+                                      Coordinate(1, 1));
+  assert((angle - pi / 2.0) < 1e-10);
+  assert((angle - pi / 2.0) > -1e-10);
 }
 
-void test_angle_between_0_2pi() {
+/* these should all be 45 degrees, the lines test different orders and rotations
+ * of that same angle */
+void test_angles_45_degree() {
   double angle1 = angle_between_points(Coordinate(0, 1), Coordinate(0, 0),
                                        Coordinate(1, 0));
   double angle2 = angle_between_points(Coordinate(1, 1), Coordinate(0, 0),
                                        Coordinate(1, 0));
-  double angle3 = angle_between_points(Coordinate(-1, -1), Coordinate(0, 0),
-                                       Coordinate(1, 0));
+  double angle3 = angle_between_points(Coordinate(-1, -1), Coordinate(-1, 0),
+                                       Coordinate(0, 0));
 
-  assert((0 <= angle1) && (angle1 < 2 * pi));
-  assert((0 <= angle2) && (angle2 < 2 * pi));
-  assert((0 <= angle3) && (angle3 < 2 * pi));
+  assert((angle1 - pi / 4.0) < 1e-10);
+  assert((angle1 - pi / 4.0) > -1e-10);
+
+  assert((angle2 - pi / 4.0) < 1e-10);
+  assert((angle2 - pi / 4.0) > -1e-10);
+
+  assert((angle3 - pi / 4.0) < 1e-10);
+  assert((angle3 - pi / 4.0) > -1e-10);
 }
 
 void test_triangle_area() {
@@ -30,5 +38,5 @@ void test_triangle_area() {
 int main() {
   test_triangle_area();
   test_angle_90_degree();
-  test_angle_between_0_2pi();
+  test_angles_45_degree();
 }
