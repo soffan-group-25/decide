@@ -4,7 +4,7 @@
 bool lic10(Points points, Parameters params) {
   int n = points.size();
   if (n < 5)
-      return false;
+    return false;
 
   int epts = params.EPTS;
   int fpts = params.FPTS;
